@@ -1,0 +1,6 @@
+<Project>
+  <!-- Ensure any running instance of the app is terminated before building so MSBuild can copy the new exe. -->
+  <Target Name="KillRunningExeBeforeBuild" BeforeTargets="BeforeBuild">
+    <Exec Command='taskkill /F /IM "Gelir-Gider Projesi.exe"' ContinueOnError="true" />
+  </Target>
+</Project>
